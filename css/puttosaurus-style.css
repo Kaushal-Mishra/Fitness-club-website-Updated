@@ -1,0 +1,208 @@
+/*!
+Theme Name: Puttosaurus
+Theme URI: https://www.cbwebsitedesign.co.uk/
+Author: Tyler Hounsome ⛳
+Author URI: https://www.cbwebsitedesign.co.uk/
+Description: Creative Brand Design
+Version: 6.1.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: puttosaurus
+*/
+.popup {
+  transition: 0.3s all;
+}
+
+.popup.closed {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup.closed .popup-inner {
+  transform: scale(0.6);
+}
+
+.popup-inner {
+  width: min(64vh, calc(100vw - 3rem));
+  max-height: calc(100vh - 3rem);
+  overflow: auto;
+  border-radius: 5rem;
+  padding: 1.5rem;
+  background: var(--color-green-light);
+  transition: 0.3s all;
+}
+
+.popup-inner .dots {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.popup-inner .dots img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  filter: brightness(0) invert(1);
+  opacity: 0.3;
+}
+
+.popup-inner .dots img:first-child {
+  transform: translateX(-30%);
+}
+
+.popup-inner .dots img:last-child {
+  transform: translateX(30%);
+}
+
+@media (min-width: 1024px) {
+  .popup-inner {
+    border-radius: 100%;
+    aspect-ratio: 1;
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  body:not(.home) .menu-container li:hover a {
+    color: var(--color-green);
+  }
+
+  .menu-container .current-menu-item {
+    color: var(--color-green-light);
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 1024px) {
+  header .menu-container {
+    padding: min(12rem, 14vh) 0;
+  }
+
+  header .menu-container .menu {
+    font-size: 6rem;
+    line-height: 1.65;
+  }
+
+  header .menu-container .menu > li {
+    justify-content: center;
+  }
+
+  .menu-container .current-menu-item {
+    color: #000;
+  }
+
+  header .menu-container .menu > li.current-menu-item > a:after {
+    color: #fff;
+  }
+}
+
+@media (max-width: 640px) {
+  header .menu-container .menu {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 380px) {
+  header .menu-container .menu {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 340px) {
+  header .menu-container .menu {
+    font-size: 3.2rem;
+  }
+}
+
+footer .current-menu-item a {
+  color: #fff;
+}
+
+.error404 footer {
+  margin-top: 0;
+}
+
+.video-bg video {
+  filter: none;
+}
+
+.image-feed .swiper {
+  transform: rotate(-3deg) translateY(10%);
+}
+
+.image-feed .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.image-feed #sb_instagram .sbi_type_video .sbi_playbtn,
+.image-feed #sb_instagram .sbi_type_carousel .sbi_playbtn {
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 2.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.image-feed #sb_instagram #sbi_load {
+  float: none;
+  display: flex;
+  justify-content: center;
+}
+
+.image-feed #sb_instagram #sbi_images,
+.image-feed #sb_instagram #sbi_images .sbi_item {
+  float: none;
+}
+
+.image-feed #sb_instagram .sbi_photo img {
+  height: 100%;
+}
+
+.image-feed #sb_instagram .sbi_follow_btn a {
+  background: transparent;
+  font-size: 1.6rem;
+  font-weight: #000;
+}
+
+.image-feed #sb_instagram .sbi_follow_btn a:hover,
+.image-feed #sb_instagram .sbi_follow_btn a:focus {
+  box-shadow: none;
+  color: var(--color-green-light);
+}
+
+.image-feed #sb_instagram .sbi_follow_btn svg:not(:root).svg-inline--fa {
+  height: 1.1em;
+}
+
+@media (min-width: 1024px) {
+  .image-feed #sb_instagram #sbi_load {
+    justify-content: flex-end;
+  }
+
+  .image-feed #sb_instagram .sbi_follow_btn svg:not(:root).svg-inline--fa {
+    height: 1.5em;
+  }
+
+  .image-feed #sb_instagram .sbi_follow_btn a {
+    font-size: 2.4rem;
+  }
+}
+
+.image-feed .swiper-slide {
+  height: auto;
+}
+
+.image-feed .sbi_photo_wrap {
+  height: 100%;
+}
+
+.image-feed .sbi_photo {
+  background-image: none !important;
+  height: 100% !important;
+  padding-bottom: 0 !important;
+}
+
+.image-feed .sbi_photo img {
+  object-fit: cover;
+}
